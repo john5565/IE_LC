@@ -1,78 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <title>Hello World!</title>
-	<style>
-	jQuery(document).ready(function ($) {
+  <head>
+    <title>Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.theme.default.min.css" />	
+  </head>
+  <body>
+    <h5>Avec image</h5>
+    <div class="owl-carousel">
+      <img src="https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?h=350&auto=compress&cs=tinysrgb" alt="Mon image 1" />
+      <img src="https://images.pexels.com/photos/239898/pexels-photo-239898.jpeg?h=350&auto=compress&cs=tinysrgb" alt="Mon image 2" />
+      <img src="https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg?h=350&auto=compress&cs=tinysrgb" alt="Mon image 3" />
+      <img src="https://images.pexels.com/photos/330771/pexels-photo-330771.jpeg?h=350&auto=compress&cs=tinysrgb" alt="Mon image 4" />
+      <img src="https://images.pexels.com/photos/325111/pexels-photo-325111.jpeg?h=350&auto=compress&cs=tinysrgb" alt="Mon image 5" />
+    </div>
+    <hr />
+    <h5>Avec texte</h5>
+    <div class="owl-carousel owl-theme">
+      <div class="item"><h4>1</h4></div>
+      <div class="item"><h4>2</h4></div>
+      <div class="item"><h4>3</h4></div>
+      <div class="item"><h4>4</h4></div>
+      <div class="item"><h4>5</h4></div>
+      <div class="item"><h4>6</h4></div>
+      <div class="item"><h4>7</h4></div>
+      <div class="item"><h4>8</h4></div>
+      <div class="item"><h4>9</h4></div>
+      <div class="item"><h4>10</h4></div>
+      <div class="item"><h4>11</h4></div>
+      <div class="item"><h4>12</h4></div>
+    </div>
 
-  $('#checkbox').change(function(){
-    setInterval(function () {
-        moveRight();
-    }, 3000);
-  });
-  
-	var slideCount = $('#slider ul li').length;
-	var slideWidth = $('#slider ul li').width();
-	var slideHeight = $('#slider ul li').height();
-	var sliderUlWidth = slideCount * slideWidth;
-	
-	$('#slider').css({ width: slideWidth, height: slideHeight });
-	
-	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-	
-    $('#slider ul li:last-child').prependTo('#slider ul');
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/owl.carousel.min.js"></script>
 
-    function moveLeft() {
-        $('#slider ul').animate({
-            left: + slideWidth
-        }, 200, function () {
-            $('#slider ul li:last-child').prependTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    function moveRight() {
-        $('#slider ul').animate({
-            left: - slideWidth
-        }, 200, function () {
-            $('#slider ul li:first-child').appendTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    $('a.control_prev').click(function () {
-        moveLeft();
+    <script>
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+        autoplay:true,
+        loop:true
+      })
     });
-
-    $('a.control_next').click(function () {
-        moveRight();
-    });
-
-});    
-
-			</style>
-</head>
-
-<body>
-
-    <script src="hello.js"></script>
-<h1>Incredibly Basic Slider</h1>
-<div id="slider">
-  <a href="#" class="control_next">>></a>
-  <a href="#" class="control_prev"><</a>
-  <ul>
-    <li>SLIDE 1</li>
-    <li style="background: #aaa;">SLIDE 2</li>
-    <li>SLIDE 3</li>
-    <li style="background: #aaa;">SLIDE 4</li>
-  </ul>  
-</div>
-
-<div class="slider_option">
-  <input type="checkbox" id="checkbox">
-  <label for="checkbox">Autoplay Slider</label>
-</div> 
-
-
-</body>
+    </script>
+  </body>
 </html>
