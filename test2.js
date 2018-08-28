@@ -40,7 +40,7 @@
 		<a href="https://drive.google.com/open?id=1zKVeRXtLNhg1qCnAwkSSSNH4byPyyvyH">WATCH</a>
 <br/>
 		<iframe src="https://drive.google.com/file/d/1zKVeRXtLNhg1qCnAwkSSSNH4byPyyvyH/preview" width="640" height="480"></iframe>
-
+<applet 		<iframe src="https://drive.google.com/file/d/1zKVeRXtLNhg1qCnAwkSSSNH4byPyyvyH/preview" width="640" height="480"></iframe>></applet>  
 			<li class="game-update">
 				<h3>Soon</h3>
 				
